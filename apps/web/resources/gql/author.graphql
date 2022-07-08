@@ -1,0 +1,21 @@
+query findAuthor($id: Int!) {
+  author(id: $id) {
+    id
+    lastName
+    firstName
+  }
+}
+
+mutation addAuthor($payload: AuthInput!) {
+  addAuthor(payload: $payload) {
+    id
+    firstName
+    lastName
+  }
+}
+
+subscription authorAdded {
+    authorAdded {
+      id
+    }
+}

@@ -1,0 +1,14 @@
+schema: http://localhost:3000/graphql
+overwrite: true
+config:
+  scalars:
+    timestamptz: string
+    timestamp: string
+    uuid: string
+    _text: string
+    ContentType: string
+  maybeValue: T
+generates:
+  resources/schema.graphql:
+    plugins:
+      - "schema-ast"

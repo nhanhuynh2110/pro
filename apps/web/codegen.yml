@@ -1,0 +1,15 @@
+overwrite: true
+schema: "./resources/schema.graphql"
+documents: "resources/gql/**/*.graphql"
+generates:
+  src/generated/types.ts:
+    plugins:
+      - typescript
+      - "typescript-operations"
+  src/generated/apollo.ts:
+    preset: import-types
+    presetConfig:
+      typesPath: ./types
+    plugins:
+      - "typescript-react-apollo"
+  

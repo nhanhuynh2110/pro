@@ -1,0 +1,30 @@
+input AuthInput {
+  firstName: String
+  id: Int!
+  lastName: String
+}
+
+type Author {
+  firstName: String
+  id: Int!
+  lastName: String
+  posts: [Post!]
+}
+
+type Mutation {
+  addAuthor(payload: AuthInput!): Author!
+}
+
+type Post {
+  id: Int!
+  title: String!
+  votes: Int
+}
+
+type Query {
+  author(id: Int!): Author!
+}
+
+type Subscription {
+  authorAdded: Author!
+}

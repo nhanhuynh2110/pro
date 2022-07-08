@@ -399,6 +399,12 @@
     {
       "packageName": "@apps/api",
       "projectFolder": "apps/api"
+    }, {
+      "packageName": "@apps/web",
+      "projectFolder": "apps/web"
+    }, {
+      "packageName": "@apps/prismadb",
+      "projectFolder": "apps/prismadb"
     }
     // {
     //   /**
